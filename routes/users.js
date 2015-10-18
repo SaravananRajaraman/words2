@@ -96,6 +96,7 @@ router.post('/signOut',function(req, res, next) {
         }
     });
 });
+
 router.post('/verifyToken',function(req, res, next) {
     var Authorization = req.body.token;
     token.find()

@@ -8,12 +8,4 @@ router.get('/', function(req, res, next) {
 
 });
 
-router.get('/signIn', function(req, res, next) {
-    res.render('login');
-});
-
-router.get('/words', function(req, res, next) {
-    res.render('words');
-});
-
 module.exports = router;

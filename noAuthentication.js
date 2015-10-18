@@ -12,7 +12,8 @@ var noAuthentication = [
     "POST/users/restPwdToken",
     "POST/users/verifyRestPwdToken",
     "POST/users/restPwd",
-    "POST/users/signOut",
+    "POST/users/signOut"
+
 ];
 
 module.exports = noAuthentication;

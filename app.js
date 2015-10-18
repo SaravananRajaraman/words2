@@ -18,6 +18,7 @@ console.log(new Date());
 //routes assigns
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var words = require('./routes/words');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,37 +35,39 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //middleware access all request
-app.use(function (req, res, next) {
+/*app.use(function (req, res, next) {
     console.log('Time:', Date.now());
 //    console.log(req.url); console.log(req.method);
     var urls = req.method+req.url;
     console.log(urls);
-    if(noAuthentication.indexOf(urls) == -1){
+    next();
+    *//*if(noAuthentication.indexOf(urls) == -1){
         if(req.header('token')){
             if(req.header('token') == "12345"){
                 next();
             }else{
                 next();
-                /*res.send({
+                *//**//*res.send({
                     error: true,
                     message: "Authentication failed"
-                });*/
+                });*//**//*
             }
         }else{
             next();
-            /*res.send({
+            *//**//*res.send({
                 error: true,
                 message: "No Authentication token"
-            });*/
+            });*//**//*
         }
     }else{
         next();
-    }
-});
+    }*//*
+});*/
 
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/words', words);
 
 // error handlers
 // catch 404 and forward to error handler
