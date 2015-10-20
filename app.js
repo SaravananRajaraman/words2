@@ -69,6 +69,9 @@ app.use('/', routes);
 app.use('/users', users);
 app.use('/words', words);
 
+//app.all(/^\/demo/, function(req, res) { res.redirect('/demo/'); });
+app.use('/demo/',express.static(__dirname+'/demo'));
+
 // error handlers
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
