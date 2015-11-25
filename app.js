@@ -9,9 +9,10 @@ var app = express();
 var http = require('http').Server(app);
 var mongoose = require('mongoose');
 var noAuthentication = require('./noAuthentication');
+var haha = require('./haha');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://creatorjs:creatorcode@ds035844.mongolab.com:35844/creatorjs');
+mongoose.connect('mongodb://words2:dummy123@ds063140.mongolab.com:63140/words2');
 
 console.log(new Date());
 

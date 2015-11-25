@@ -8,7 +8,8 @@ require(['Router'],
         window.globalVar = {};
         globalVar.server = 1 ;
         globalVar.local = "./js/json/";
-        globalVar.api = "http://creatorjs.herokuapp.com/" ;
+        //globalVar.api = "http://creatorjs.herokuapp.com/" ;
+        globalVar.api = "http://localhost:3000/" ;
         globalVar.endPoints ={
             login:[
                 globalVar.local + 'login.json',
